@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { ClientAuthProvider } from "./components/client-auth-provider";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,8 +24,11 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
+    <ClientAuthProvider>
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
@@ -38,6 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
+    </ClientAuthProvider>
   );
 }
 

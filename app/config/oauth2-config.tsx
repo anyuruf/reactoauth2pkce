@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { AuthContext, type IAuthContext, type TAuthConfig } from 'react-oauth2-code-pkce';
+import { type TAuthConfig } from 'react-oauth2-code-pkce';
 
 // Get info from http://localhost:8080/realms/test/.well-known/openid-configuration
 
