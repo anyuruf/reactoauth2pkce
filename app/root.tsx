@@ -28,7 +28,6 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <ClientAuthProvider>
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
@@ -37,12 +36,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <ClientAuthProvider>
+          {children}
+        </ClientAuthProvider>
         <ScrollRestoration />
-        <Scripts />
+        <Scripts /> 
       </body>
     </html>
-    </ClientAuthProvider>
   );
 }
 
