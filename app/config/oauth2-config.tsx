@@ -4,11 +4,11 @@ import { type TAuthConfig } from 'react-oauth2-code-pkce';
 
 export const authConfig: TAuthConfig = {
   clientId: 'suuku-frontend',
-  authorizationEndpoint: 'http://localhost:9080/realms/suuku-domain/protocol/openid-connect/auth',
-  logoutEndpoint: 'http://localhost:9080/realms/suuku-domain/protocol/openid-connect/logout',
-  tokenEndpoint: 'http://localhost:9080/realms/suuku-domain/protocol/openid-connect/token',
+  authorizationEndpoint: 'http://localhost:9080/realms/suuku-realm/protocol/openid-connect/auth',
+  logoutEndpoint: 'http://localhost:9080/realms/suuku-realm/protocol/openid-connect/logout',
+  tokenEndpoint: 'http://localhost:9080/realms/suuku-realm/protocol/openid-connect/token',
   redirectUri: 'http://localhost:5173/',
-  scope: 'profile openid email offline',
+  scope: 'profile email offline_access',
   // Example to redirect back to original path after login has completed
   // preLogin: () => localStorage.setItem('preLoginPath', window.location.pathname),
   // postLogin: () => window.location.replace(localStorage.getItem('preLoginPath') || ''),
