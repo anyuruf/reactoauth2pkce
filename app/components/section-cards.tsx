@@ -76,8 +76,7 @@ export function SectionCards() {
       </>):
        (
         <>
-          <div className="flex flex-wrap items-center gap-2 md:flex-row">You are not logged in.</div>
-          <Card className="@container/card">
+        <Card className="@container/card">
         <CardHeader>
           <CardTitle>Please Login To Access Token (JWT)</CardTitle>
           <CardContent>
